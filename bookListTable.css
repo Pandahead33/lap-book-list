@@ -2,7 +2,7 @@
     --rows: 10;
     --columns: 4;
     --header-font: "Roboto Slab";
-    --backup-body-font: "serif";
+    --backup-header-font: "serif";
     --body-font: "Comic Neue";
     --backup-body-font: "cursive";
 }
@@ -15,6 +15,10 @@ body {
     grid-template-rows: repeat(var(--rows), minxmax(auto, 1fr));
     column-gap: 5px;
     row-gap: 5px;
+}
+
+p {
+   line-height: 1.4;
 }
 
 .cell {
@@ -107,6 +111,7 @@ a:hover {
     .cell:nth-child(6n - 4) > p {
         font-weight: bold;
         font-size: 1.2em;
+        font-family: var(--header-font), var(--backup-header-font), serif;
     }
 
     .cell:nth-child(n)::before {
